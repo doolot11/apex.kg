@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Company Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img width="10" src="./img/apex_mainlogo.svg" alt="Company Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Контакт</a></li>
+          <li><a href="#">Партфолю</a></li>
+          <li><a href="#">Проекты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="image-list">
+        <div class="image-item" style="grid-column: span 2; grid-row: span 2">
+          <img class="open-modal-button" src="./img/img1.jpg" alt="Breakfast" />
+        </div>
+        <div class="image-item">
+          <img src="./img/img2.jpg" class="open-modal-button" alt="Burger" />
+        </div>
+        <div class="image-item">
+          <img
+            src="https://images.unsplash.com/photo-1522770179533-24471fcdba45"
+            alt="Camera"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item" style="grid-column: span 2">
+          <img
+            src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c"
+            alt="Coffee"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item" style="grid-column: span 2">
+          <img
+            src="https://images.unsplash.com/photo-1533827432537-70133748f5c8"
+            alt="Hats"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item" style="grid-column: span 2; grid-row: span 2">
+          <img
+            src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62"
+            alt="Honey"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item">
+          <img
+            src="https://images.unsplash.com/photo-1516802273409-68526ee1bdd6"
+            alt="Basketball"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item">
+          <img
+            src="https://images.unsplash.com/photo-1518756131217-31eb79b20e8f"
+            alt="Fern"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item" style="grid-column: span 2; grid-row: span 2">
+          <img
+            src="https://images.unsplash.com/photo-1597645587822-e99fa5d45d25"
+            alt="Mushrooms"
+            class="open-modal-button"
+          />
+        </div>
+        <div class="image-item">
+          <img
+            src="https://images.unsplash.com/photo-1567306301408-9b74779a11af"
+            class="open-modal-button"
+            alt="Tomato basil"
+          />
+        </div>
+        <div class="image-item">
+          <img
+            src="https://images.unsplash.com/photo-1471357674240-e1a485acb3e1"
+            class="open-modal-button"
+            alt="Sea star"
+          />
+        </div>
+        <div class="image-item" style="grid-column: span 2">
+          <img
+            src="https://images.unsplash.com/photo-1589118949245-7d38baf380d6"
+            class="open-modal-button"
+            alt="Bike"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <img src="./img/mainlogo.svg" alt="Feature 1" />
+        <h2>Creative Design</h2>
+        <p>
+          Our team of talented designers creates unique and engaging designs
+          that leave a lasting impression.
+        </p>
+      </div>
+      <div class="feature">
+        <img src="./img/mainlogo.svg" alt="Feature 2" />
+        <h2>User-Friendly</h2>
+        <p>
+          We focus on creating intuitive designs that provide a seamless user
+          experience for your customers.
+        </p>
+      </div>
+      <!-- <div class="feature">
+        <img src="./img/mainlogo.svg" alt="Feature 3" />
+        <h2>Responsive</h2>
+        <p>
+          Our designs are fully responsive, ensuring that they look great and
+          function perfectly on all devices.
+        </p>
+      </div> -->
+    </section>
+
+    <section class="portfolio">
+      <h2>Our Portfolio</h2>
+      <div class="gallery">
+        <img src="./img/mainlogo.svg" alt="Project 1" />
+        <img src="./img/mainlogo.svg" alt="Project 2" />
+        <img src="./img/mainlogo.svg" alt="Project 3" />
+        <img src="./img/mainlogo.svg" alt="Project 4" />
+      </div>
+    </section>
+
+    <section class="video">
+      <h2>Watch Our Company Video</h2>
+      <div class="video-container">
+        <iframe
+          style="width: 100%; height: 100vh"
+          src="https://www.youtube.com/embed/2UizPYNGEE8"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <!-- <video controls>
+          <source src="https://www.youtube.com/watch?v=2UizPYNGEE8" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> -->
+      </div>
+    </section>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modalImage" src="" />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2023 Design Company. All rights reserved.</p>
+    </footer>
+    <script>
+      // JavaScript code to handle opening and closing the modal
+      const modal = document.getElementById("myModal");
+      const images = document.getElementsByClassName("open-modal-button");
+      const closeBtn = document.getElementsByClassName("close-button")[0];
+      const modalImage = document.getElementById("modalImage");
+
+      // Attach click event listeners to each image
+      for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", function () {
+          console.log(this.src);
+          modalImage.src = this.src;
+          modal.style.display = "block";
+        });
+      }
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close the modal when clicking outside of it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
