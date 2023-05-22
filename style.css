@@ -1,3 +1,5 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
 body {
   background-color: #000;
   color: #fff;
@@ -34,6 +36,24 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.banner span {
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.5; */
+  position: absolute;
+  background: linear-gradient(to top, #000000f0, #00000046);
 }
 
 .hero {
@@ -124,7 +144,6 @@ body {
   height: auto;
 }
 
-
 /* image list style */
 
 .image-list {
@@ -207,10 +226,117 @@ body {
   cursor: pointer;
 }
 
-
-
-
 /* media 700px */
+
+/* animation btn */
+
+.wrap_social {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  /* border: 1px solid red;
+  margin-bottom: 200px; */
+}
+.animation_btn {
+  position: relative;
+  display: flex;
+  transform: rotate(-25deg) skew(25deg);
+  transform-style: preserve-3d;
+}
+.animation_btn li {
+  position: relative;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  margin: 0px 20px;
+}
+.animation_btn li:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: #2a2a2a;
+  transform: skewX(-41deg);
+}
+.animation_btn li:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background: #2a2a2a;
+  transform: skewY(-49deg);
+}
+.animation_btn li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  background: #2a2a2a;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px !important;
+  transition: 1.5s ease-out;
+}
+.animation_btn li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+.animation_btn li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+.animation_btn li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+.animation_btn li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+.animation_btn li:hover span:nth-child(1) {
+  transform: translate(0px, 0px);
+  opacity: 0.2;
+}
+.animation_btn li:nth-child(1):hover span {
+  background: #1B74E4 !important;
+}
+.animation_btn li:nth-child(2):hover span {
+  background: #FF0000 !important;
+}
+.animation_btn li:nth-child(3):hover span {
+  background: #C13584 !important;
+}
+.animation_btn li:nth-child(4):hover span {
+  background: #5FFC7B !important;
+}
+
+.animation_btn li:nth-child(1) span{
+  color: #1B74E4;
+}
+.animation_btn li:nth-child(2) span{
+  color: #FF0000;
+}
+.animation_btn li:nth-child(3) span{
+  color:  #C13584;
+}
+.animation_btn li:nth-child(4) span{
+  color: #5FFC7B;
+}
+.animation_btn li:hover span {
+  z-index: 1000;
+  transition: 0.3s;
+  color: #fff;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+
 
 @media screen and (max-width: 700px) {
   .logo img {
@@ -219,10 +345,13 @@ body {
   .nav-links a {
     font-size: 12px;
   }
-  .nav-links{
+  .nav-links {
     padding: 0;
   }
-  .navbar{
+  .navbar {
     width: 100%;
+  }
+  .banner img{
+    height: 450px;
   }
 }
