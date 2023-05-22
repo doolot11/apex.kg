@@ -22,11 +22,7 @@
     </header>
     <section class="banner">
       <span></span>
-      <img
-        id="banner_slide"
-        src="./img/img2.jpg"
-        alt="photo"
-      />
+      <img id="myImage" src="./img/img2.jpg" alt="photo" />
       <div class="wrap_social">
         <ul class="animation_btn">
           <li>
@@ -245,25 +241,40 @@
 
       // banner slide
 
-      var banner_images = [
-        "./img/img1.jpg",
-        "./img/img2.jpg",
-        // "./img/img1.jpg",
-      ];
+      var photos = ["./img/img1.jpg", "./img/img2.jpg"];
+      var currentIndex = 0;
 
-      var current_index = 0;
+      function changePhoto() {
+        var image = document.getElementById("myImage");
+        image.classList.remove("fade-in"); // Remove fade-in class
 
-      function changeImages() {
-        var banner_slide = document.getElementById("banner_slide");
-        banner_slide.src = banner_images[current_index];
-        banner_images.alt = "photo " + (current_index + 1);
-        current_index++;
-        if (current_index >= banner_images.length) {
-          current_index = 0;
-        }
-        setTimeout(changeImages, 7000);
+        setTimeout(function () {
+          image.src = photos[currentIndex];
+          image.alt = "Photo " + (currentIndex + 1);
+          image.classList.add("fade-in"); // Add fade-in class
+        }, 1000); // Delay updating the photo for a smoother transition
+
+        currentIndex = (currentIndex + 1) % photos.length;
+
+        setTimeout(changePhoto, 5000);
       }
-      setTimeout(changeImages, 7000);
+
+      setTimeout(changePhoto, 5000);
+
+      // var current_index = 0;
+
+      // function changeImages() {
+      //   var banner_slide = document.getElementById("banner_slide");
+      //   // banner_images.classList.add("banner_slide");
+      //   banner_slide.src = banner_images[current_index];
+      //   banner_images.alt = "photo " + (current_index + 1);
+      //   current_index++;
+      //   if (current_index >= banner_images.length) {
+      //     current_index = 0;
+      //   }
+      //   setTimeout(changeImages, 7000);
+      // }
+      // setTimeout(changeImages, 7000);
     </script>
     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
   </body>
