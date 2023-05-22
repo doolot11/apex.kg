@@ -284,50 +284,50 @@ body {
   font-size: 15px !important;
   transition: 1.5s ease-out;
 }
-.animation_btn li:hover span:nth-child(5) {
+.animation_btn li:hover span:nth-of-type(5) {
   transform: translate(40px, -40px);
   opacity: 1;
 }
-.animation_btn li:hover span:nth-child(4) {
+.animation_btn li:hover span:nth-of-type(4) {
   transform: translate(30px, -30px);
   opacity: 0.8;
 }
-.animation_btn li:hover span:nth-child(3) {
+.animation_btn li:hover span:nth-of-type(3) {
   transform: translate(20px, -20px);
   opacity: 0.6;
 }
-.animation_btn li:hover span:nth-child(2) {
+.animation_btn li:hover span:nth-of-type(2) {
   transform: translate(10px, -10px);
   opacity: 0.4;
 }
-.animation_btn li:hover span:nth-child(1) {
+.animation_btn li:hover span:nth-of-type(1) {
   transform: translate(0px, 0px);
   opacity: 0.2;
 }
-.animation_btn li:nth-child(1):hover span {
-  background: #1B74E4 !important;
+.animation_btn li:nth-of-type(1):hover span {
+  background: #1b74e4 !important;
 }
-.animation_btn li:nth-child(2):hover span {
-  background: #FF0000 !important;
+.animation_btn li:nth-of-type(2):hover span {
+  background: #ff0000 !important;
 }
-.animation_btn li:nth-child(3):hover span {
-  background: #C13584 !important;
+.animation_btn li:nth-of-type(3):hover span {
+  background: #c13584 !important;
 }
-.animation_btn li:nth-child(4):hover span {
-  background: #5FFC7B !important;
+.animation_btn li:nth-of-type(4):hover span {
+  background: #5ffc7b !important;
 }
 
-.animation_btn li:nth-child(1) span{
-  color: #1B74E4;
+.animation_btn li:nth-of-type(1) span {
+  color: #1b74e4;
 }
-.animation_btn li:nth-child(2) span{
-  color: #FF0000;
+.animation_btn li:nth-of-type(2) span {
+  color: #ff0000;
 }
-.animation_btn li:nth-child(3) span{
-  color:  #C13584;
+.animation_btn li:nth-of-type(3) span {
+  color: #c13584;
 }
-.animation_btn li:nth-child(4) span{
-  color: #5FFC7B;
+.animation_btn li:nth-of-type(4) span {
+  color: #5ffc7b;
 }
 .animation_btn li:hover span {
   z-index: 1000;
@@ -335,8 +335,6 @@ body {
   color: #fff;
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-
-
 
 @media screen and (max-width: 700px) {
   .logo img {
@@ -351,7 +349,7 @@ body {
   .navbar {
     width: 100%;
   }
-  .banner img{
+  .banner img {
     height: 450px;
   }
 }
