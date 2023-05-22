@@ -22,9 +22,13 @@
     </header>
     <section class="banner">
       <span></span>
-      <img src="./img/img2.jpg" alt="" />
+      <img
+        id="banner_slide"
+        src="./img/img2.jpg"
+        alt="photo"
+      />
       <div class="wrap_social">
-        <ul class="animation_btn"> 
+        <ul class="animation_btn">
           <li>
             <a href="https://facebook.com/apex.design.kg">
               <span></span>
@@ -32,7 +36,7 @@
               <span></span>
               <span></span>
               <span class="fa fa-facebook"></span>
-            </a> 
+            </a>
           </li>
           <li>
             <a href="#">
@@ -41,7 +45,7 @@
               <span></span>
               <span></span>
               <span class="fa fa-youtube"></span>
-            </a> 
+            </a>
           </li>
           <li>
             <a href="https://instagram.com/apex.design.kg">
@@ -50,7 +54,7 @@
               <span></span>
               <span></span>
               <span class="fa fa-instagram"></span>
-            </a> 
+            </a>
           </li>
           <li>
             <a href="https://wa.me/996709622667">
@@ -59,10 +63,10 @@
               <span></span>
               <span></span>
               <span class="fa fa-whatsapp"></span>
-            </a> 
+            </a>
           </li>
-        </ul>  
-      </div> 
+        </ul>
+      </div>
     </section>
 
     <section>
@@ -223,7 +227,6 @@
       // Attach click event listeners to each image
       for (let i = 0; i < images.length; i++) {
         images[i].addEventListener("click", function () {
-          console.log(this.src);
           modalImage.src = this.src;
           modal.style.display = "block";
         });
@@ -239,7 +242,29 @@
           modal.style.display = "none";
         }
       };
+
+      // banner slide
+
+      var banner_images = [
+        "./img/img1.jpg",
+        "./img/img2.jpg",
+        // "./img/img1.jpg",
+      ];
+
+      var current_index = 0;
+
+      function changeImages() {
+        var banner_slide = document.getElementById("banner_slide");
+        banner_slide.src = banner_images[current_index];
+        banner_images.alt = "photo " + (current_index + 1);
+        current_index++;
+        if (current_index >= banner_images.length) {
+          current_index = 0;
+        }
+        setTimeout(changeImages, 7000);
+      }
+      setTimeout(changeImages, 7000);
     </script>
-      <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>  
+    <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
   </body>
 </html>
